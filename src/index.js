@@ -24,16 +24,13 @@ app.get( '/', ( req, res ) => {
   res.send( 'Notes API dev using Express JS' );
 } );
 
-/***********DB CONNECTION **********/
-
+const mongoUrl = process.env.MONGO_URL;
 const PORT = process.env.PORT;
-
-mongoose.connect( process.env.MONGO_URL, {
-  dbName: process.env.DB_NAME
-} )
+/***********DB CONNECTION **********/
+mongoose.connect(mongoUrl)
   .then( () => {
     app.listen( PORT, () => {
-      console.log( 'Server started on port' + PORT +  'the url is localhost:' + PORT );
+      console.log( 'Server started on port ' + PORT );
     } );
   } )
   .catch( (e) => console.log('Errors = ',e))
