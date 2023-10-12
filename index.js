@@ -3,7 +3,6 @@ const app = express();
 const mongoose = require( 'mongoose' );
 const dotenv = require( 'dotenv' );
 const cors = require( 'cors' );
-
 dotenv.config();
 
 /******CONVERTING REQUEST(req) BODY TO JSON WHICH IS OF STRING TYPE BY-DEFAULT******/
