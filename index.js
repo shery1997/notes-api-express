@@ -11,9 +11,9 @@ app.use( express.json() );
 
 app.use( cors() );
 
-const userRoutes = require( './routes/userRoutes' );
-const noteRoutes = require( './routes/noteRoutes' );
-const quoteRoutes = require( './routes/quoteRoutes' );
+const userRoutes = require( './src/routes/userRoutes' );
+const noteRoutes = require( './src/routes/noteRoutes' );
+const quoteRoutes = require( './src/routes/quoteRoutes' );
 
 
 app.use( '/users', userRoutes );
